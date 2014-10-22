@@ -1,0 +1,33 @@
+{
+  "name": "learn-pre-commit",
+  "version": "1.0.0",
+  "description": "Node.js pre-commit tutorial",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "tape"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nelsonic/learn-pre-commit.git"
+  },
+  "keywords": [
+    "learn",
+    "git",
+    "pre-commit",
+    "for",
+    "code",
+    "quality"
+  ],
+  "author": "@nelsonic <contact.nelsonic@gmail.com> (https://github.com/nelsonic)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nelsonic/learn-pre-commit/issues"
+  },
+  "homepage": "https://github.com/nelsonic/learn-pre-commit",
+  "devDependencies": {
+    "pre-commit": "0.0.9"
+  }
+}

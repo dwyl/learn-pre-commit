@@ -44,7 +44,64 @@ In node-land there are two popular modules we can use to run pre-commit checks:
 - **precommit-hook**: https://www.npmjs.org/package/precommit-hook
 - **pre-commit**: https://www.npmjs.org/package/pre-commit
 
-Both are functionally equivalent
+Both are *functionally* equivalent so take your pick.  
+I'm covering [pre-commit](https://github.com/observing/pre-commit)
+because has more *concise* documentation.
+
+#### Install
+
+Install the node module and save it as a
+**development dependency** for your project:
+
+```
+npm install pre-commit --save-dev
+```
+
+#### Define the Scripts we want to Run
+
+Example **package.json** file:
+
+```json
+{
+  "name": "learn-pre-commit",
+  "version": "1.0.0",
+  "description": "Node.js pre-commit tutorial",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nelsonic/learn-pre-commit"
+  },
+  "devDependencies": {
+    "pre-commit": "0.0.9"
+  },
+  "scripts": {
+    "test": "tape ./test/*.js",
+    "coverage": "istanbul cover tape ./test/*.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+  },
+  "pre-commit": [
+    "jshint",
+    "coverage"
+  ]
+}
+```
+
+#### Explanation
+
+The interesting bits here are:
+
+a) **scripts** - a list tasks that can be run.
+Each script can be run by issuing the command:
+`npm run script-name` (e.g: `npm run coverage` to check the test coverage).
+
+b) **pre-commit** - an array of the scripts we want to run (in order)
+*before* we allow a commit.
+
+#### Example
+
+I've used pre-commit in *all* my recent projects (both personal & work)
+so take your pick for an example.
+A simple one is: https://github.com/nelsonic/ac (Autocompletion Demo)
+Which does a JSHint and Test/Code Coverage before allowing a commit.
 
 
 ### Java, Ruby, Python, etc.
