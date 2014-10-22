@@ -71,7 +71,9 @@ Example **package.json** file:
     "url": "https://github.com/nelsonic/learn-pre-commit"
   },
   "devDependencies": {
-    "pre-commit": "0.0.9"
+    "istanbul": "^0.3.2",
+    "pre-commit": "0.0.9",
+    "tape": "^3.0.1"
   },
   "scripts": {
     "test": "tape ./test/*.js",
@@ -94,14 +96,22 @@ Each script can be run by issuing the command:
 `npm run script-name` (e.g: `npm run coverage` to check the test coverage).
 
 b) **pre-commit** - an array of the scripts we want to run (in order)
-*before* we allow a commit.
+*before* we allow a commit. In this case **jshint** ensures
+our code is consistent according to the rules for the project and
+**coverage** ensures that our desired level of code/test coverage is met.
 
 #### Example
 
 I've used pre-commit in *all* my recent projects (both personal & work)
 so take your pick for an example.
-A simple one is: https://github.com/nelsonic/ac (Autocompletion Demo)
+
+I've included a simple ***Hello World*** in the /**example** folder.
+
+
+https://github.com/nelsonic/ac (Autocompletion Demo)
 Which does a JSHint and Test/Code Coverage before allowing a commit.
+
+
 
 
 ### Java, Ruby, Python, etc.
