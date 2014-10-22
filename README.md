@@ -98,34 +98,22 @@ Each script can be run by issuing the command:
 b) **pre-commit** - an array of the scripts we want to run (in order)
 *before* we allow a commit. In this case **jshint** ensures
 our code is consistent according to the rules for the project and
-**coverage** ensures that our desired level of code/test coverage is met.
+**coverage** ensures that our desired level of code/test coverage
+(**100%**) is met.
 
 #### Example
 
-I've used pre-commit in *all* my recent projects (both personal & work)
-so take your pick for an example.
+See /**example** for a ***Hello World*** example.
 
-I've included a simple ***Hello World*** in the /**example** folder.
+[![Build Status](https://travis-ci.org/nelsonic/ac.png?branch=master)](https://travis-ci.org/nelsonic/ac)
+[![Coverage Status](https://coveralls.io/repos/nelsonic/ac/badge.png)](https://coveralls.io/r/nelsonic/ac)
+[![Code Climate](https://codeclimate.com/github/nelsonic/ac.png)](https://codeclimate.com/github/nelsonic/ac)
+[![Dependencies](https://david-dm.org/nelsonic/ac.png?theme=shields.io)](https://david-dm.org/nelsonic/ac)
+[![devDependency Status](https://david-dm.org/nelsonic/ac/dev-status.svg)](https://david-dm.org/nelsonic/ac#info=devDependencies)
 
+***Try it*** in your own porjects! If you have any *questions*,
+submit an issue on GitHub or tweet me [@nelsonic](https://twitter.com/nelsonic)
 
-https://github.com/nelsonic/ac (Autocompletion Demo)
-Which does a JSHint and Test/Code Coverage before allowing a commit.
-
-
-
-
-### Java, Ruby, Python, etc.
-
-We haven't (yet) found a *good* way of doing pre-commit checks
-in Java.  
-Our Java Team are using [sonar](http://www.sonarqube.org)
-to run code quality checks. (sadly, this is *not pre-commit*!)
-
-For **Ruby** & **Python** checkout
-[pre-commit.com](http://pre-commit.com) (its multi-language)
-
-If you find a *better* pre-commit tool for Java-land,
-please inform me or send a PR!
 
 ## Background Reading
 
@@ -156,3 +144,17 @@ http://en.wikipedia.org/wiki/ISO/IEC_9126 (*old* but human-readable!)
 - Full ISO/IEC 25010 Software Quality Standard (*current*):
 https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-1:v1:en
 (***tldr;***)
+
+
+### Java, Ruby, Python, etc.
+
+We haven't (yet) found a *good* way of doing pre-commit checks
+in Java.  
+Our Java Team are using [sonar](http://www.sonarqube.org)
+to run code quality checks. (sadly, this is *not pre-commit*!)
+
+For **Ruby** & **Python** checkout
+[pre-commit.com](http://pre-commit.com) (its multi-language)
+
+If you find a *better* pre-commit tool for Java-land,
+please inform me or send a PR!

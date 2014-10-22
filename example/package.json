@@ -29,6 +29,7 @@
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore ."
   },
   "pre-commit": [
-    "jshint"
+    "jshint",
+    "coverage"
   ]
 }
