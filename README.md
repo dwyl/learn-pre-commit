@@ -1,4 +1,6 @@
-Learn Pre-Commit for Code Awesomeness
+**Want *consistent* code in your team**...?
+====
+Learn how to use *Pre-Commit Today*
 ================
 
 Pre-commit hooks let you **run checks** ***before*** allowing a **commit**
