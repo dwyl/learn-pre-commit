@@ -116,6 +116,29 @@ See /**example** for a ***Hello World*** example.
 ***Try it*** in your own porjects! If you have any *questions*,
 submit an issue on GitHub or tweet me [@nelsonic](https://twitter.com/nelsonic)
 
+## Advanced How?
+
+### Problems in Node Land
+While using [pre-commit](https://github.com/observing/pre-commit), we found this [issue](https://github.com/dwyl/learn-pre-commit/issues/4).
+
+On installation pre-commit uses [symlink](https://nodejs.org/api/fs.html#fs_fs_symlink_target_path_type_callback) to copy a pre-commit hook into your `.git/hooks` folder. Symlink is useful as it allows you to repeatedly change your hook script without having to copy it into your private `.git/` folder.
+
+This script will then use the package.json to find other scripts to call. But this sometimes causes a problem as in some cases Windows' default security policy will only allow administrators to create symbolic links. Solution...
+
+### Do it yourself!
+
+If you inspect the `.git/hooks` folder you will find you can add/remove hooks easily.
+
+**Hooks can be written in most scripting languages** so you can find any online to use or write your own with your favourite language.
+
+Modify your hooks directly by copy and pasting manually or with a script. The latter is better as it enables all developers in a team to do so easily but...
+
+ ** You will need to find a mechanism to make sure developers first install them and second keep them up to date**
+
+An example of custom hooks written with node and a script to copy them into `.git` folder can be found [here](https://github.com/jrans/Node-Git-Hooks).
+
+Would it have been easier to just adjust the security policy? Probably, but it turns out writing git hooks is easy too! See below for more information on types of hooks.
+
 
 ## Background Reading
 
@@ -147,16 +170,12 @@ http://en.wikipedia.org/wiki/ISO/IEC_9126 (*old* but human-readable!)
 https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-1:v1:en
 (***tldr;***)
 
-
 ### Java, Ruby, Python, etc.
 
-We haven't (yet) found a *good* way of doing pre-commit checks
-in Java.  
-Our Java Team are using [sonar](http://www.sonarqube.org)
-to run code quality checks. (sadly, this is *not pre-commit*!)
+If you don't want to write your own pre-commit hooks:
 
-For **Ruby** & **Python** checkout
-[pre-commit.com](http://pre-commit.com) (its multi-language)
+- Ruby & Python - checkout pre-commit.com (its multi-language).
 
-If you find a *better* pre-commit tool for Java-land,
-please inform me or send a PR!
+- Java - We haven't found a good tool (yet). Our Java Team are using sonar to run code quality checks. (sadly, this is not pre-commit!)
+
+If you find a better pre-commit tools for any language, please inform me or send a PR!
