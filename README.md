@@ -116,6 +116,22 @@ See /**example** for a ***Hello World*** example.
 ***Try it*** in your own porjects! If you have any *questions*,
 submit an issue on GitHub or tweet me [@nelsonic](https://twitter.com/nelsonic)
 
+### Elixir/Phoenix
+
+As Phoenix comes with Node.js as standard, we can take advantage of this and use the same method as above. The only difference is the script we use to run our tests/coverage:
+
+
+```json
+  ...
+  "scripts": {
+    "coverage": "mix coveralls"
+  },
+  "pre-commit": [
+    "coverage"
+  ]
+}
+```
+
 ## Advanced How?
 
 ### Problems in Node Land
