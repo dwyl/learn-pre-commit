@@ -10,7 +10,7 @@ Pre-commit hooks let you **run checks** ***before*** allowing a **commit**
 
 Think of **pre-commit** as an automatic
 [checklist](http://en.wikipedia.org/wiki/Checklist)
-for your code. The checks prevents people from committing code
+for your code. The checks prevent people from committing code
 that does not meet the required standards, saving *everyone* time.
 Imagine *never* having to read sloppy code again...!
 
@@ -23,7 +23,7 @@ The client-side hooks are for client operations such as committing and merging.
 The server-side hooks are for Git server operations such as automatically
 starting the build/test server or notifying team-mates of changes.
 
-You can use these hooks for all sorts of reasons, we are going to focus
+You can use these hooks for all sorts of reasons, but here we are going to focus
 on **client-side** pre-commit hooks (checks that are run ***before***
   code is allowed to be committed).
 
@@ -48,7 +48,7 @@ In node-land there are two popular modules we can use to run pre-commit checks:
 
 Both are *functionally* equivalent so take your pick.  
 I'm covering [pre-commit](https://github.com/observing/pre-commit)
-because has more *concise* documentation.
+because it has more *concise* documentation.
 
 #### Install
 
@@ -93,7 +93,7 @@ Example **package.json** file:
 
 The interesting bits here are:
 
-a) **scripts** - a list tasks that can be run.
+a) **scripts** - a list of tasks that can be run.
 Each script can be run by issuing the command:
 `npm run script-name` (e.g: `npm run coverage` to check the test coverage).
 
@@ -113,7 +113,7 @@ See /**example** for a ***Hello World*** example.
 [![Dependencies](https://david-dm.org/nelsonic/ac.png?theme=shields.io)](https://david-dm.org/nelsonic/ac)
 [![devDependency Status](https://david-dm.org/nelsonic/ac/dev-status.svg)](https://david-dm.org/nelsonic/ac#info=devDependencies)
 
-***Try it*** in your own porjects! If you have any *questions*,
+***Try it*** in your own projects! If you have any *questions*,
 submit an issue on GitHub or tweet me [@nelsonic](https://twitter.com/nelsonic)
 
 ### Elixir/Phoenix
@@ -145,11 +145,11 @@ This script will then use the package.json to find other scripts to call. But th
 
 If you inspect the `.git/hooks` folder you will find you can add/remove hooks easily.
 
-**Hooks can be written in most scripting languages** so you can find any online to use or write your own with your favourite language.
+**Hooks can be written in most scripting languages** so you can find some online to use or write your own with your favourite language.
 
-Modify your hooks directly by copy and pasting manually or with a script. The latter is better as it enables all developers in a team to do so easily but...
+Modify your hooks directly by copy and pasting manually or with a script. The latter is better as it enables all developers in a team to do so easily, but...
 
- ** You will need to find a mechanism to make sure developers first install them and second keep them up to date**
+**You will need to find a mechanism to make sure developers first install them and second keep them up to date.**
 
 An example of custom hooks written with node and a script to copy them into `.git` folder can be found [here](https://github.com/jrans/Node-Git-Hooks).
 
@@ -166,7 +166,7 @@ http://git-scm.com/book/en/Customizing-Git-Git-Hooks
 (the official Git guide to Hooks)
 
 
-### Code Style
+### Code Style
 
 - Addy Osmani on Code Style:
 http://addyosmani.com/blog/javascript-style-guides-and-beautifiers
@@ -184,14 +184,14 @@ http://en.wikipedia.org/wiki/Software_quality
 http://en.wikipedia.org/wiki/ISO/IEC_9126 (*old* but human-readable!)
 - Full ISO/IEC 25010 Software Quality Standard (*current*):
 https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-1:v1:en
-(***tldr;***)
+(***tldr***)
 
 ### Java, Ruby, Python, etc.
 
 If you don't want to write your own pre-commit hooks:
 
-- Ruby & Python - checkout pre-commit.com (its multi-language).
+- Ruby & Python - check out [pre-commit.com](http://pre-commit.com/) (its multi-language).
 
-- Java - We haven't found a good tool (yet). Our Java Team are using sonar to run code quality checks. (sadly, this is not pre-commit!)
+- Java - We haven't found a good tool (yet). Our Java Team are using [sonar](https://github.com/SonarSource/sonar-java) to run code quality checks. (Sadly, this is not pre-commit!)
 
-If you find a better pre-commit tools for any language, please inform me or send a PR!
+If you find better pre-commit tools for any language, please inform me or send a PR!
