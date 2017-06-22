@@ -127,7 +127,7 @@ http://git-scm.com/book/en/Customizing-Git-Git-Hooks
 (the official Git guide to Hooks)
 
 
-### Code Style
+### Code Style
 
 - Addy Osmani on Code Style:
 http://addyosmani.com/blog/javascript-style-guides-and-beautifiers
