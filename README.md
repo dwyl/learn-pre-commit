@@ -6,10 +6,10 @@ Learn how to use *Pre-Commit Today*
 Pre-commit hooks let you **run checks** ***before*** allowing a **commit**
 (e.g. JSLint or Test Coverage).
 
-![Checklist](http://i.imgur.com/4RXCUyP.jpg)
+![Checklist](https://i.imgur.com/4RXCUyP.jpg)
 
 Think of **pre-commit** as an automatic
-[checklist](http://en.wikipedia.org/wiki/Checklist)
+[checklist](https://en.wikipedia.org/wiki/Checklist)
 for your code. The checks prevent people from committing code
 that does not meet the required standards, saving *everyone* time.
 Imagine *never* having to read sloppy code again...!
@@ -160,28 +160,28 @@ Would it have been easier to just adjust the security policy? Probably, but it t
 
 ### Git Hooks
 
-- Gentle introduction to Git Hooks: http://githooks.com
+- Gentle introduction to Git Hooks: https://githooks.com
 - *Way* more than you will *ever* need to know about Git Hooks:
-http://git-scm.com/book/en/Customizing-Git-Git-Hooks
+https://git-scm.com/book/en/Customizing-Git-Git-Hooks
 (the official Git guide to Hooks)
 
 
 ### Code Style
 
 - Addy Osmani on Code Style:
-http://addyosmani.com/blog/javascript-style-guides-and-beautifiers
+https://addyosmani.com/blog/javascript-style-guides-and-beautifiers
 - JavaScript Code Style checker (NPM) module:
 https://www.npmjs.org/package/jscs
 
 ### Code Quality
 
 - How do we define **Code Quality**?
-http://stackoverflow.com/questions/405243/how-do-we-define-code-quality
+https://stackoverflow.com/questions/405243/how-do-we-define-code-quality
 (interesting discussion. mostly *opinion* - I want an *objective* measure!)
 - Software Quality (in depth):
-http://en.wikipedia.org/wiki/Software_quality
+https://en.wikipedia.org/wiki/Software_quality
 - ISO/IEC 9126 Software engineering — Product quality:
-http://en.wikipedia.org/wiki/ISO/IEC_9126 (*old* but human-readable!)
+https://en.wikipedia.org/wiki/ISO/IEC_9126 (*old* but human-readable!)
 - Full ISO/IEC 25010 Software Quality Standard (*current*):
 https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-1:v1:en
 (***tldr***)
@@ -190,7 +190,7 @@ https://www.iso.org/obp/ui/#iso:std:iso-iec:25010:ed-1:v1:en
 
 If you don't want to write your own pre-commit hooks:
 
-- Ruby & Python - check out [pre-commit.com](http://pre-commit.com/) (its multi-language).
+- Ruby & Python - check out [pre-commit.com](https://pre-commit.com/) (its multi-language).
 
 - Java - We haven't found a good tool (yet). Our Java Team are using [sonar](https://github.com/SonarSource/sonar-java) to run code quality checks. (Sadly, this is not pre-commit!)
 
